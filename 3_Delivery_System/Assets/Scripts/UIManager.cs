@@ -10,6 +10,8 @@ public class UIManager : MonoBehaviour {
 	public Text scoreText;
     int seconds;
     // for present
+	int mainPresent;
+	int feverPresent;
     public Text presentText;
     public int presentNum = 0;
     // for speed
@@ -47,14 +49,5 @@ public class UIManager : MonoBehaviour {
         }
 
         StartCoroutine(SpeedSetting());
-    }
-
-    void ShiftFever()
-    {
-        if (timer > 10)
-        {
-            MainGame.SetActive(false);
-            FeverTime.SetActive(true);
-        }
     }
 }
