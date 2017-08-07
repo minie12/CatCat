@@ -47,4 +47,10 @@ public class SpawnBox : MonoBehaviour
         boxItem.Enqueue(obj);//큐에 넣어주고
         obj.SetActive(false);//disable
     }
+    
+    public void StopBox()
+    {
+        GameObject spawning = GameObject.Find("Spawning");
+        spawning.SetActive(false);
+    }
 }
