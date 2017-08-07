@@ -50,4 +50,9 @@ public class UIManager : MonoBehaviour {
 
         StartCoroutine(SpeedSetting());
     }
+	
+	public void PresentPlus()
+	{
+		presentNum += 1;
+	}
 }
