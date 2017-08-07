@@ -250,6 +250,7 @@ public class MovingBox : MonoBehaviour
         if (mySprite == presentSpr)
         {
             gameObject.SetActive(false);
+            GameObject.Find("UIManager").GetComponent<UIManager>().PresentPlus();
         }
 
         else
