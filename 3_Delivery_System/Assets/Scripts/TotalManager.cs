@@ -27,11 +27,17 @@ public class TotalManager : MonoBehaviour {
         gameOver.SetActive(false);
     }
 
-    void IsFever()
+    publiv void IsFever()
     {
 	mainGame.SetActive(false);
 	feverTime.SetActive(true);
     }
+	
+	public void MainGameOn()
+	{
+		feverTime.SetActive(false);
+		mainGame.SetActive(true);
+	}
 	
     public void CatEnd()
     {
