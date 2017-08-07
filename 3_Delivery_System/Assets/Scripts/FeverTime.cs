@@ -36,15 +36,16 @@ public class FeverTime : MonoBehaviour
         Vector3 ObjPos = new Vector3(gameObject.GetComponent<Transform>().position.x, gameObject.GetComponent<Transform>().position.y, 10); //get position of the object
         */
 
-        presentNum += 1;
+        GameObject.Find("UIManager").GetComponent<UIManager>().PresentPlus();
         Debug.Log(presentNum);
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Sensor") //when object falls
+        if (other.gameObject.name == "Fail") //when object falls
         {
             this.transform.gameObject.SetActive(false);
+            GameObject.Find("TotalManager").GetComponent<TotalManager>().MainGameOn();
         }
     }
 }
